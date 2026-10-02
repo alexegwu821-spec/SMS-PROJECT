@@ -1,0 +1,115 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>  
+  <meta charset="utf-8"/>  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
+  <title>Academia Pro - Student Information & Records</title>  
+  
+  <!-- Tailwind CDN & Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+  
+  <!-- Custom JS Config & CSS -->
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>  
+<body class="bg-surface-canvas text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-brand-cobalt-subtle selection:text-primary">  
+
+  <!-- TOP APP BAR -->  
+  <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-margin h-14 w-full bg-surface-card border-b border-border-subtle shadow-sm">  
+    <div class="flex items-center gap-space-sm">  
+      <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm">  
+        <span class="material-symbols-outlined text-[20px]" data-icon="school">school</span>  
+      </div>  
+      <div class="flex items-center gap-2">  
+        <span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">Academia Pro</span>  
+        <span class="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded-full text-label-xs font-label-xs bg-brand-cobalt-subtle text-primary border border-border-subtle">  
+          Fall 2024  
+        </span>  
+      </div>  
+    </div>  
+    <div class="flex items-center gap-space-xs">  
+      <span class="inline-flex sm:hidden items-center px-2 py-0.5 rounded-full text-label-xs font-label-xs bg-brand-cobalt-subtle text-primary font-medium">  
+        F'24  
+      </span>  
+      <button aria-label="Toggle theme" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-subtle transition-colors duration-150 active:scale-95" type="button">  
+        <span class="material-symbols-outlined text-[19px]" data-icon="light_mode">light_mode</span>  
+      </button>  
+      <button aria-label="Notifications" class="relative w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-subtle transition-colors duration-150 active:scale-95" type="button">  
+        <span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>  
+        <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-danger ring-2 ring-surface-card"></span>  
+      </button>  
+      <div class="flex items-center pl-1 border-l border-border-subtle">  
+        <div class="relative group cursor-pointer">  
+          <img class="w-8 h-8 rounded-full object-cover ring-1 ring-border-strong" alt="Dr. Aris Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXa9urkfQ13Sw8Zax1gCVmI-nFojXD9e1MpjcXUWQh-I9FBV0Z23bhJG5P9IFtG5NCf76346hmWEeistUz9Oj_Mz8DGc7jkaRpeBstrFJiUGjjwS-NjhhL2MBmYnlCmUyd0kUezijOEOtiD58n2iSw1ssCRnXu27twdATTBMzeVwGuXT_fqZirOb4IbWeDYTPt4soIMaIKGTR_AvA_RxUPcYI8zjRl_F9pF2I-c4752iEe6IGEJtE"/>  
+          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container ring-1 ring-surface-card"></span>  
+        </div>  
+      </div>  
+    </div>  
+  </header>  
+
+  <!-- MAIN SCROLLABLE CONTENT CANVAS -->  
+  <main class="flex-1 w-full max-w-md mx-auto pt-16 pb-24 px-margin flex flex-col gap-space-md">  
+    
+    <!-- PAGE HEADER SECTION -->  
+    <section class="pt-2">  
+      <div class="flex flex-col gap-1">  
+        <div class="flex items-center justify-between">  
+          <span class="text-label-xs font-label-xs uppercase tracking-wider text-secondary font-bold">Registry Directory</span>  
+          <span class="text-label-xs font-label-xs text-secondary flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-status-alert"></span>  
+            Sync: 2m ago  
+          </span>  
+        </div>  
+        <h1 class="text-headline-xl-mobile font-headline-xl-mobile text-on-surface tracking-tight">  
+          Student Information & Records  
+        </h1>  
+        <p class="text-body-sm font-body-sm text-on-surface-variant">  
+          Live academic telemetry, grade trajectories, and compliance rosters.  
+        </p>  
+      </div>  
+      
+      <!-- Quick Action Buttons -->  
+      <div class="flex items-center gap-space-xs mt-3.5 overflow-x-auto pb-1 custom-scrollbar">  
+        <button class="shrink-0 flex items-center gap-1.5 bg-gradient-to-r from-primary to-primary-container text-on-primary px-3.5 py-2 rounded-lg text-label-sm font-label-sm font-semibold shadow-sm active:scale-95 transition-all" type="button">  
+          <span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span>  
+          <span>Enroll Student</span>  
+        </button>  
+        <button class="shrink-0 flex items-center gap-1.5 bg-surface-card border border-border-strong text-on-surface px-3 py-2 rounded-lg text-label-sm font-label-sm font-medium hover:bg-surface-subtle active:scale-95 transition-all" type="button">  
+          <span class="material-symbols-outlined text-[18px] text-secondary" data-icon="checklist">checklist</span>  
+          <span>Batch Actions</span>  
+        </button>  
+        <button class="shrink-0 flex items-center gap-1.5 bg-surface-card border border-border-strong text-on-surface px-3 py-2 rounded-lg text-label-sm font-label-sm font-medium hover:bg-surface-subtle active:scale-95 transition-all" type="button">  
+          <span class="material-symbols-outlined text-[18px] text-secondary" data-icon="file_download">file_download</span>  
+          <span>Export</span>  
+        </button>  
+      </div>  
+    </section>  
+
+    <!-- EXECUTIVE KPI METRICS -->  
+    <section class="grid grid-cols-2 gap-space-sm">  
+      <!-- Metric 1 -->  
+      <div class="bg-surface-card p-3 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between">  
+        <div class="flex items-center justify-between mb-1">  
+          <span class="text-label-xs font-label-xs text-secondary font-medium">Total Enrolled</span>  
+          <span class="w-6 h-6 rounded-md bg-brand-cobalt-subtle text-primary flex items-center justify-center">  
+            <span class="material-symbols-outlined text-[15px]" data-icon="groups">groups</span>  
+          </span>  
+        </div>  
+        <div class="flex items-baseline justify-between mt-1">  
+          <span class="text-headline-md font-headline-md text-on-surface font-bold">3,428</span>  
+          <span class="text-label-xs font-label-xs text-tertiary bg-status-success-subtle px-1.5 py-0.5 rounded font-semibold flex items-center">+4.2%</span>  
+        </div>  
+        <div class="mt-2 text-label-xs font-label-xs text-on-surface-variant flex items-center gap-1">  
+          <span class="material-symbols-outlined text-[12px] text-primary" data-icon="domain">domain</span>  
+          <span>Across 4 colleges</span>  
+        </div>  
+      </div>  
+      <!-- Metric 2 -->  
+      <div class="bg-surface-card p-3 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between">  
+        <div class="flex items-center justify-between mb-1">  
+          <span class="text-label-xs font-label-xs text-secondary font-medium">Avg Attendance</span>  
+          <span class="w-6 h-6 rounded-md bg-status-success-subtle text-tertiary flex items-center justify-center">  
+            <span class="material-symbols-outlined text-[15px]" data-icon="fact_check">fact_check</span>  
+          </span>  
+        </div>  
+        <div class="flex items-baseline justify-between mt-1">
